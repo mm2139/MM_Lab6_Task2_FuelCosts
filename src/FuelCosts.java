@@ -60,5 +60,4 @@ public class FuelCosts {
         /* put here the calculator for the cost per 100 miles in dolarras
         put here the distance left in miles */
 
-    }
 }
