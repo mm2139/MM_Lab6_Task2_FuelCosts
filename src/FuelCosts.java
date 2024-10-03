@@ -5,9 +5,9 @@ public class FuelCosts {
 
         Scanner scan = new Scanner(System.in);
 
-        double gallons;
-        double fuelEfficiencyMilesPerGal;
-        double gasPricePerGal;
+        double gallons = 0;
+        double fuelEfficiencyMilesPerGal= 0;
+        double gasPricePerGal = 0;
         boolean allInputs = false;
 
         do {
@@ -39,7 +39,7 @@ public class FuelCosts {
                         i--;
                     }
                     scan.nextLine();
-                } else if (i==3) {
+                } else if (i == 3) {
                     System.out.println("Please input the price per gallon of gas.");
                     if (scan.hasNextDouble()) {
                         gasPricePerGal = scan.nextDouble();
@@ -57,7 +57,8 @@ public class FuelCosts {
             }
         } while (!allInputs);
 
-        /* put here the calculator for the cost per 100 miles in dolarras
-        put here the distance left in miles */
+        System.out.printf("%-23s %.2f", "Cost per 100 miles in $", 100/fuelEfficiencyMilesPerGal*gasPricePerGal);
+        System.out.printf("\n%-23s %.2f", "Distance Left in Miles ", fuelEfficiencyMilesPerGal*gallons);
 
+    }
 }
